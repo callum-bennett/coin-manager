@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
 import authReducer from './authReducer';
+import coinReducer from './coinReducer';
 
 export default combineReducers({
-  auth: authReducer
+  auth: authReducer,
+  coins: coinReducer
 });
