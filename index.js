@@ -15,7 +15,7 @@ app.on('ready', () => {
 
   if (!process.env.ELECTRON_DEV) {
     mainWindow.loadURL(url.format({
-      pathname: path.join(__dirname, '/public/index.html'),
+      pathname: path.join(__dirname, '/build/index.html'),
       protocol: 'file:',
       slashes: true
     }));

@@ -4,15 +4,26 @@
   "private": true,
   "dependencies": {
     "concurrently": "^3.5.0",
+    "material-ui": "^0.19.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "semantic-ui-react": "^0.76.0",
     "wait-on": "^2.0.2"
   },
+  "homepage": ".",
   "scripts": {
+    "electron": "electron .",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "react-start": "$(npm bin)/react-scripts start",
     "electron-start": "ELECTRON_DEV=1 $(npm bin)/electron .",
-    "dev": "$(npm bin)/concurrently 'npm run react-start' '$(npm bin)/wait-on http://localhost:3000/ && npm run electron-start'"
+    "start-dev": "$(npm bin)/concurrently 'npm run react-start' '$(npm bin)/wait-on http://localhost:3000/ && npm run electron-start'"
   },
   "devDependencies": {
     "electron": "^1.7.9"
