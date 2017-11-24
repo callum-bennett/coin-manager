@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../actions';
+import CoinList from './renderers/CoinList';
+import { Loading } from './renderers/Loading';
 
 class Home extends Component {
 
@@ -9,22 +11,10 @@ class Home extends Component {
     this.props.fetchCoins();
   }
 
-  renderCoins() {
-    return this.props.coins.map(coin => {
-      return (
-        <div key={coin.id}>
-          {coin.symbol}
-        </div>
-      )
-    });
-  }
-
   render() {
-    return(
-      <div>
-        {this.renderCoins()}
-      </div>
-    );
+    return this.props.coins.length
+      ? <CoinList coins={this.props.coins} />
+      : <Loading />;
   }
 }
 
