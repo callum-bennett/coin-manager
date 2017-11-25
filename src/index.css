@@ -1,4 +1,5 @@
 body {
+  background: #24292e;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -7,4 +8,16 @@ body {
 .logo {
   max-height: 80px;
   width: auto;
+}
+
+.percent-red {
+  color: #ff4500;
+}
+
+.percent-yellow {
+  color: #ffff00;
+}
+
+.percent-green {
+  color: #00cc00;
 }
