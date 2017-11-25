@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Table } from 'semantic-ui-react';
+import moment from 'moment';
 
 class CoinList extends Component {
 
@@ -22,9 +23,12 @@ class CoinList extends Component {
 
   render() {
 
+    const lastUpdated = moment(this.props.lastUpdated);
+
     console.log(this.props.coins);
     return (
       <Container>
+        <div className="">Last updated: {lastUpdated.format('DD-MM-YY h:mm:ss a')}</div>
         <Table celled className="ui inverted table">
           <Table.Header>
             <Table.Row>

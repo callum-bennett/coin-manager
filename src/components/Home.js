@@ -13,7 +13,7 @@ class Home extends Component {
 
   render() {
     return this.props.coins.length
-      ? <CoinList coins={this.props.coins} />
+      ? <CoinList coins={this.props.coins} lastUpdated={Date.now()} />
       : <Loading />;
   }
 }
